@@ -1,0 +1,1003 @@
+INFO  [2017-01-02 11:36:40] (ContextLoader.java:305) Root WebApplicationContext: initialization started
+INFO  [2017-01-02 11:36:40] (AbstractApplicationContext.java:581) Refreshing Root WebApplicationContext: startup date [Mon Jan 02 11:36:40 CST 2017]; root of context hierarchy
+INFO  [2017-01-02 11:36:40] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from file [G:\rms-extjs\rms-config\target\classes\applicationContext-dao.xml]
+INFO  [2017-01-02 11:36:41] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from file [G:\rms-extjs\rms-config\target\classes\applicationContext-service.xml]
+INFO  [2017-01-02 11:36:41] (PropertiesLoaderSupport.java:172) Loading properties file from class path resource [properties/db.properties]
+INFO  [2017-01-02 11:36:41] (AutowiredAnnotationBeanPostProcessor.java:155) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  [2017-01-02 11:36:43] (DruidDataSource.java:721) {dataSource-1} inited
+INFO  [2017-01-02 11:36:43] (LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  [2017-01-02 11:36:43] (LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  [2017-01-02 11:36:43] (Version.java:37) HHH000412: Hibernate Core {5.1.1.Final}
+INFO  [2017-01-02 11:36:43] (Environment.java:213) HHH000206: hibernate.properties not found
+INFO  [2017-01-02 11:36:43] (Environment.java:317) HHH000021: Bytecode provider name : javassist
+INFO  [2017-01-02 11:36:43] (JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+WARN  [2017-01-02 11:36:43] (EntityManagerFactoryBuilderImpl.java:786) HHH90000006: Attempted to specify unsupported NamingStrategy via setting [hibernate.ejb.naming_strategy]; NamingStrategy has been removed in favor of the split ImplicitNamingStrategy and PhysicalNamingStrategy; use [hibernate.implicit_naming_strategy] or [hibernate.physical_naming_strategy], respectively, instead.
+INFO  [2017-01-02 11:36:44] (Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+WARN  [2017-01-02 11:36:44] (UUIDHexGenerator.java:42) HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+INFO  [2017-01-02 11:36:45] (Version.java:27) HV000001: Hibernate Validator 5.1.1.Final
+INFO  [2017-01-02 11:36:46] (AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  [2017-01-02 11:36:47] (QueryTranslatorFactoryInitiator.java:47) HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2017-01-02 11:36:47] (ContextLoader.java:345) Root WebApplicationContext: initialization completed in 7831 ms
+INFO  [2017-01-02 11:36:48] (FrameworkServlet.java:489) FrameworkServlet 'rms': initialization started
+INFO  [2017-01-02 11:36:48] (AbstractApplicationContext.java:581) Refreshing WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 11:36:48 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 11:36:48] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [springmvc.xml]
+INFO  [2017-01-02 11:36:48] (AutowiredAnnotationBeanPostProcessor.java:155) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rms.controller.IndexController.index()
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.add(com.rms.vo.OrgVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.getAll(java.lang.String)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.deleteAll(java.lang.String[])
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/getAllLikeTree],methods=[GET]}" onto public java.util.List<com.rms.common.dto.OrganizationDto> com.rms.controller.OrgController.getAllLikeTree()
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.add(com.rms.vo.OrgTypeVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/update],methods=[PUT]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.update(com.rms.common.entity.OrgTypeEntity)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/delete/{id}],methods=[DELETE]}" onto public void com.rms.controller.OrgTypeContorller.delete(java.lang.String)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getAllWithoutPage],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getAllWithoutPage()
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getOthers/{id}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getOthers(java.lang.String)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getAllOrgType(int,int)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getOrgTypeByPid/{pid}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getOrgTypeByPid(java.lang.String,int,int)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgTypeRule/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeRuleContorller.add(com.rms.vo.OrgTypeRuleVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgTypeRule/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeRuleContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.add(com.rms.vo.PersonVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/update],methods=[PUT]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.update(com.rms.common.entity.PersonEntity)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/delete/{id}],methods=[DELETE]}" onto public void com.rms.controller.PersonContorller.delete(java.lang.String)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getAll(int,int)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByPhone/{phone}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByPhone(java.lang.String)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByNickName/{nickName}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByNickName(java.lang.String)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByEmail],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByEmail(java.lang.String)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByIdCard/{idCard}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByIdCard(java.lang.String)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.add(com.rms.vo.PositionVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.getAll()
+INFO  [2017-01-02 11:36:48] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.deleteAll(java.lang.String[])
+INFO  [2017-01-02 11:36:49] (RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 11:36:48 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 11:36:49] (RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 11:36:48 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 11:36:50] (AbstractUrlHandlerMapping.java:354) Mapped URL path [/view/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+INFO  [2017-01-02 11:36:50] (FrameworkServlet.java:508) FrameworkServlet 'rms': initialization completed in 2421 ms
+WARN  [2017-01-02 11:41:47] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:47] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:47] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:47] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:47] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:48] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 11:41:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 11:41:57] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:08:36] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:08:36] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:08:36] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:08:36] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:08:36] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:08:37] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:08:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:08:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:08:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:08:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:08:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:08:40] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:14:11] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:14:11] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:14:11] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:14:11] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:14:11] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:14:12] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:14:15] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:14:15] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:14:15] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:14:15] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:14:15] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:14:15] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:19:58] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:19:58] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:19:58] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:19:58] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:19:58] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:19:58] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:26:13] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:26:13] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:26:13] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:26:13] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:26:13] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:26:14] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:26:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:26:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:26:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:26:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:26:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:26:17] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:27:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:27:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:27:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:27:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:27:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:27:18] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:33:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:33:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:33:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:33:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:33:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:33:52] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:33:56] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:33:56] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:33:56] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:33:56] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:33:56] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:33:56] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:40:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:40:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:40:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:40:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:40:39] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:40:40] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:40:43] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:40:43] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:40:43] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:40:43] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:40:43] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:40:44] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:41:22] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:41:22] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:41:22] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:41:22] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:41:22] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:41:23] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:46:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:46:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:46:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:46:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:46:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:46:52] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 12:46:55] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:46:55] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:46:55] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:46:55] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 12:46:55] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 12:46:56] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 14:28:20] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:28:20] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:28:20] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:28:20] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:28:20] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 14:28:21] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 14:28:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:28:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:28:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:28:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:28:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 14:28:24] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 14:37:14] (SqlExceptionHelper.java:129) SQL Error: 1048, SQLState: 23000
+ERROR [2017-01-02 14:37:14] (SqlExceptionHelper.java:131) Column 't_orgid' cannot be null
+INFO  [2017-01-02 14:37:14] (AbstractBatchImpl.java:193) HHH000010: On release of batch it still contained JDBC statements
+ERROR [2017-01-02 14:37:14] (PersonContorller.java:133) 500
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:278)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:521)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:761)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:730)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:487)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:291)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy60.save(Unknown Source)
+	at com.rms.controller.PersonContorller.add(PersonContorller.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:207)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2932)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3432)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:582)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:456)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1295)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:468)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3135)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2352)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:491)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:147)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:65)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:61)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:517)
+	... 53 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 't_orgid' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2723)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_executeUpdate(FilterAdapter.java:1069)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2721)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeUpdate(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:253)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204)
+	... 72 more
+WARN  [2017-01-02 14:38:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:38:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:38:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:38:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:38:17] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 14:38:17] (PersonContorller.java:47) page=================1
+INFO  [2017-01-02 14:39:45] (ContextLoader.java:305) Root WebApplicationContext: initialization started
+INFO  [2017-01-02 14:39:46] (AbstractApplicationContext.java:581) Refreshing Root WebApplicationContext: startup date [Mon Jan 02 14:39:46 CST 2017]; root of context hierarchy
+INFO  [2017-01-02 14:39:46] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from file [G:\rms-extjs\rms-config\target\classes\applicationContext-dao.xml]
+INFO  [2017-01-02 14:39:46] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from file [G:\rms-extjs\rms-config\target\classes\applicationContext-service.xml]
+INFO  [2017-01-02 14:39:47] (PropertiesLoaderSupport.java:172) Loading properties file from class path resource [properties/db.properties]
+INFO  [2017-01-02 14:39:47] (AutowiredAnnotationBeanPostProcessor.java:155) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  [2017-01-02 14:39:48] (DruidDataSource.java:721) {dataSource-1} inited
+INFO  [2017-01-02 14:39:48] (LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  [2017-01-02 14:39:48] (LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  [2017-01-02 14:39:48] (Version.java:37) HHH000412: Hibernate Core {5.1.1.Final}
+INFO  [2017-01-02 14:39:48] (Environment.java:213) HHH000206: hibernate.properties not found
+INFO  [2017-01-02 14:39:48] (Environment.java:317) HHH000021: Bytecode provider name : javassist
+INFO  [2017-01-02 14:39:48] (JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+WARN  [2017-01-02 14:39:48] (EntityManagerFactoryBuilderImpl.java:786) HHH90000006: Attempted to specify unsupported NamingStrategy via setting [hibernate.ejb.naming_strategy]; NamingStrategy has been removed in favor of the split ImplicitNamingStrategy and PhysicalNamingStrategy; use [hibernate.implicit_naming_strategy] or [hibernate.physical_naming_strategy], respectively, instead.
+INFO  [2017-01-02 14:39:49] (Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+WARN  [2017-01-02 14:39:49] (UUIDHexGenerator.java:42) HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+INFO  [2017-01-02 14:39:49] (Version.java:27) HV000001: Hibernate Validator 5.1.1.Final
+INFO  [2017-01-02 14:39:51] (AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  [2017-01-02 14:39:51] (QueryTranslatorFactoryInitiator.java:47) HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2017-01-02 14:39:52] (ContextLoader.java:345) Root WebApplicationContext: initialization completed in 6900 ms
+INFO  [2017-01-02 14:39:52] (FrameworkServlet.java:489) FrameworkServlet 'rms': initialization started
+INFO  [2017-01-02 14:39:52] (AbstractApplicationContext.java:581) Refreshing WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 14:39:52 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 14:39:52] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [springmvc.xml]
+INFO  [2017-01-02 14:39:53] (AutowiredAnnotationBeanPostProcessor.java:155) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rms.controller.IndexController.index()
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.add(com.rms.vo.OrgVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.getAll(java.lang.String)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/getAllLikeTree],methods=[GET]}" onto public java.util.List<com.rms.common.dto.OrganizationDto> com.rms.controller.OrgController.getAllLikeTree()
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.add(com.rms.vo.OrgTypeVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/update],methods=[PUT]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.update(com.rms.common.entity.OrgTypeEntity)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/delete/{id}],methods=[DELETE]}" onto public void com.rms.controller.OrgTypeContorller.delete(java.lang.String)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getOthers/{id}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getOthers(java.lang.String)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getAllOrgType(int,int)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getOrgTypeByPid/{pid}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getOrgTypeByPid(java.lang.String,int,int)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getAllWithoutPage],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getAllWithoutPage()
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgTypeRule/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeRuleContorller.add(com.rms.vo.OrgTypeRuleVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgTypeRule/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeRuleContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.add(com.rms.vo.PersonVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/update],methods=[PUT]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.update(com.rms.common.entity.PersonEntity)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/delete/{id}],methods=[DELETE]}" onto public void com.rms.controller.PersonContorller.delete(java.lang.String)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getAll(int,int)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByNickName/{nickName}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByNickName(java.lang.String)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByIdCard/{idCard}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByIdCard(java.lang.String)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByEmail],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByEmail(java.lang.String)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByPhone/{phone}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByPhone(java.lang.String)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.add(com.rms.vo.PositionVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.getAll()
+INFO  [2017-01-02 14:39:53] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:39:54] (RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 14:39:52 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 14:39:54] (RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 14:39:52 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 14:39:54] (AbstractUrlHandlerMapping.java:354) Mapped URL path [/view/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+INFO  [2017-01-02 14:39:54] (FrameworkServlet.java:508) FrameworkServlet 'rms': initialization completed in 1823 ms
+WARN  [2017-01-02 14:40:10] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:40:10] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:40:10] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:40:10] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:40:10] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 14:40:11] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 14:43:49] (SqlExceptionHelper.java:129) SQL Error: 1048, SQLState: 23000
+ERROR [2017-01-02 14:43:49] (SqlExceptionHelper.java:131) Column 't_orgid' cannot be null
+INFO  [2017-01-02 14:43:49] (AbstractBatchImpl.java:193) HHH000010: On release of batch it still contained JDBC statements
+ERROR [2017-01-02 14:43:49] (PersonContorller.java:133) 500
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:278)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:521)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:761)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:730)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:487)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:291)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy60.save(Unknown Source)
+	at com.rms.controller.PersonContorller.add(PersonContorller.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:207)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2932)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3432)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:582)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:456)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1295)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:468)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3135)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2352)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:491)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:147)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:65)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:61)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:517)
+	... 53 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 't_orgid' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2723)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_executeUpdate(FilterAdapter.java:1069)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2721)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeUpdate(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:253)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204)
+	... 72 more
+INFO  [2017-01-02 14:47:57] (ContextLoader.java:305) Root WebApplicationContext: initialization started
+INFO  [2017-01-02 14:47:57] (AbstractApplicationContext.java:581) Refreshing Root WebApplicationContext: startup date [Mon Jan 02 14:47:57 CST 2017]; root of context hierarchy
+INFO  [2017-01-02 14:47:57] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from file [G:\rms-extjs\rms-config\target\classes\applicationContext-dao.xml]
+INFO  [2017-01-02 14:47:58] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from file [G:\rms-extjs\rms-config\target\classes\applicationContext-service.xml]
+INFO  [2017-01-02 14:47:58] (PropertiesLoaderSupport.java:172) Loading properties file from class path resource [properties/db.properties]
+INFO  [2017-01-02 14:47:58] (AutowiredAnnotationBeanPostProcessor.java:155) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  [2017-01-02 14:47:59] (DruidDataSource.java:721) {dataSource-1} inited
+INFO  [2017-01-02 14:47:59] (LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  [2017-01-02 14:47:59] (LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  [2017-01-02 14:47:59] (Version.java:37) HHH000412: Hibernate Core {5.1.1.Final}
+INFO  [2017-01-02 14:47:59] (Environment.java:213) HHH000206: hibernate.properties not found
+INFO  [2017-01-02 14:47:59] (Environment.java:317) HHH000021: Bytecode provider name : javassist
+INFO  [2017-01-02 14:47:59] (JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+WARN  [2017-01-02 14:48:00] (EntityManagerFactoryBuilderImpl.java:786) HHH90000006: Attempted to specify unsupported NamingStrategy via setting [hibernate.ejb.naming_strategy]; NamingStrategy has been removed in favor of the split ImplicitNamingStrategy and PhysicalNamingStrategy; use [hibernate.implicit_naming_strategy] or [hibernate.physical_naming_strategy], respectively, instead.
+INFO  [2017-01-02 14:48:00] (Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+WARN  [2017-01-02 14:48:00] (UUIDHexGenerator.java:42) HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+INFO  [2017-01-02 14:48:01] (Version.java:27) HV000001: Hibernate Validator 5.1.1.Final
+INFO  [2017-01-02 14:48:02] (AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  [2017-01-02 14:48:03] (QueryTranslatorFactoryInitiator.java:47) HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2017-01-02 14:48:04] (ContextLoader.java:345) Root WebApplicationContext: initialization completed in 6990 ms
+INFO  [2017-01-02 14:48:04] (FrameworkServlet.java:489) FrameworkServlet 'rms': initialization started
+INFO  [2017-01-02 14:48:04] (AbstractApplicationContext.java:581) Refreshing WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 14:48:04 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 14:48:04] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [springmvc.xml]
+INFO  [2017-01-02 14:48:04] (AutowiredAnnotationBeanPostProcessor.java:155) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rms.controller.IndexController.index()
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.add(com.rms.vo.OrgVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.getAll(java.lang.String)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/getAllLikeTree],methods=[GET]}" onto public java.util.List<com.rms.common.dto.OrganizationDto> com.rms.controller.OrgController.getAllLikeTree()
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.add(com.rms.vo.OrgTypeVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/update],methods=[PUT]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.update(com.rms.common.entity.OrgTypeEntity)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/delete/{id}],methods=[DELETE]}" onto public void com.rms.controller.OrgTypeContorller.delete(java.lang.String)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getAllWithoutPage],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getAllWithoutPage()
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getOrgTypeByPid/{pid}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getOrgTypeByPid(java.lang.String,int,int)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getAllOrgType(int,int)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getOthers/{id}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getOthers(java.lang.String)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgTypeRule/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeRuleContorller.add(com.rms.vo.OrgTypeRuleVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgTypeRule/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeRuleContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.add(com.rms.vo.PersonVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/update],methods=[PUT]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.update(com.rms.common.entity.PersonEntity)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/delete/{id}],methods=[DELETE]}" onto public void com.rms.controller.PersonContorller.delete(java.lang.String)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getAll(int,int)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByEmail],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByEmail(java.lang.String)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByIdCard/{idCard}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByIdCard(java.lang.String)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByNickName/{nickName}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByNickName(java.lang.String)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByPhone/{phone}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByPhone(java.lang.String)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.add(com.rms.vo.PositionVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.getAll()
+INFO  [2017-01-02 14:48:05] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.deleteAll(java.lang.String[])
+INFO  [2017-01-02 14:48:05] (RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 14:48:04 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 14:48:05] (RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 14:48:04 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 14:48:06] (AbstractUrlHandlerMapping.java:354) Mapped URL path [/view/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+INFO  [2017-01-02 14:48:06] (FrameworkServlet.java:508) FrameworkServlet 'rms': initialization completed in 2208 ms
+WARN  [2017-01-02 14:50:26] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:50:26] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:50:26] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:50:26] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:50:26] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 14:50:27] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 14:50:54] (SqlExceptionHelper.java:129) SQL Error: 1048, SQLState: 23000
+ERROR [2017-01-02 14:50:54] (SqlExceptionHelper.java:131) Column 't_orgid' cannot be null
+INFO  [2017-01-02 14:50:54] (AbstractBatchImpl.java:193) HHH000010: On release of batch it still contained JDBC statements
+ERROR [2017-01-02 14:50:54] (PersonContorller.java:138) 500
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:278)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:521)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:761)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:730)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:487)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:291)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy60.save(Unknown Source)
+	at com.rms.controller.PersonContorller.add(PersonContorller.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:207)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2932)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3432)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:582)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:456)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1295)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:468)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3135)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2352)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:491)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:147)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:65)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:61)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:517)
+	... 53 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 't_orgid' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2723)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_executeUpdate(FilterAdapter.java:1069)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2721)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeUpdate(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:253)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204)
+	... 72 more
+WARN  [2017-01-02 14:52:02] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:52:02] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:52:02] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:52:02] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 14:52:02] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 14:52:02] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 14:53:44] (SqlExceptionHelper.java:129) SQL Error: 1048, SQLState: 23000
+ERROR [2017-01-02 14:53:44] (SqlExceptionHelper.java:131) Column 't_orgid' cannot be null
+INFO  [2017-01-02 14:53:44] (AbstractBatchImpl.java:193) HHH000010: On release of batch it still contained JDBC statements
+ERROR [2017-01-02 14:53:44] (PersonContorller.java:138) 500
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:278)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:521)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:761)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:730)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:487)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:291)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy60.save(Unknown Source)
+	at com.rms.controller.PersonContorller.add(PersonContorller.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:207)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2932)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3432)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:582)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:456)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1295)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:468)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3135)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2352)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:491)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:147)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:65)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:61)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:517)
+	... 53 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 't_orgid' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2723)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_executeUpdate(FilterAdapter.java:1069)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2721)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeUpdate(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:253)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204)
+	... 72 more
+WARN  [2017-01-02 15:03:30] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:03:30] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:03:30] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:03:30] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:03:30] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 15:03:31] (PersonContorller.java:47) page=================1
+WARN  [2017-01-02 15:06:45] (SqlExceptionHelper.java:129) SQL Error: 1048, SQLState: 23000
+ERROR [2017-01-02 15:06:45] (SqlExceptionHelper.java:131) Column 't_orgid' cannot be null
+INFO  [2017-01-02 15:06:45] (AbstractBatchImpl.java:193) HHH000010: On release of batch it still contained JDBC statements
+ERROR [2017-01-02 15:06:45] (PersonContorller.java:138) 500
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:278)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:521)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:761)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:730)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:487)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:291)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy60.save(Unknown Source)
+	at com.rms.controller.PersonContorller.add(PersonContorller.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:207)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2932)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3432)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:582)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:456)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1295)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:468)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3135)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2352)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:491)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:147)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:65)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:61)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:517)
+	... 53 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 't_orgid' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2723)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_executeUpdate(FilterAdapter.java:1069)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2721)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeUpdate(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:253)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204)
+	... 72 more
+INFO  [2017-01-02 15:15:35] (ContextLoader.java:305) Root WebApplicationContext: initialization started
+INFO  [2017-01-02 15:15:35] (AbstractApplicationContext.java:581) Refreshing Root WebApplicationContext: startup date [Mon Jan 02 15:15:35 CST 2017]; root of context hierarchy
+INFO  [2017-01-02 15:15:36] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from file [G:\rms-extjs\rms-config\target\classes\applicationContext-dao.xml]
+INFO  [2017-01-02 15:15:36] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from file [G:\rms-extjs\rms-config\target\classes\applicationContext-service.xml]
+INFO  [2017-01-02 15:15:37] (PropertiesLoaderSupport.java:172) Loading properties file from class path resource [properties/db.properties]
+INFO  [2017-01-02 15:15:37] (AutowiredAnnotationBeanPostProcessor.java:155) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  [2017-01-02 15:15:38] (DruidDataSource.java:721) {dataSource-1} inited
+INFO  [2017-01-02 15:15:38] (LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  [2017-01-02 15:15:38] (LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  [2017-01-02 15:15:38] (Version.java:37) HHH000412: Hibernate Core {5.1.1.Final}
+INFO  [2017-01-02 15:15:38] (Environment.java:213) HHH000206: hibernate.properties not found
+INFO  [2017-01-02 15:15:38] (Environment.java:317) HHH000021: Bytecode provider name : javassist
+INFO  [2017-01-02 15:15:38] (JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+WARN  [2017-01-02 15:15:38] (EntityManagerFactoryBuilderImpl.java:786) HHH90000006: Attempted to specify unsupported NamingStrategy via setting [hibernate.ejb.naming_strategy]; NamingStrategy has been removed in favor of the split ImplicitNamingStrategy and PhysicalNamingStrategy; use [hibernate.implicit_naming_strategy] or [hibernate.physical_naming_strategy], respectively, instead.
+INFO  [2017-01-02 15:15:39] (Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+WARN  [2017-01-02 15:15:39] (UUIDHexGenerator.java:42) HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+INFO  [2017-01-02 15:15:40] (Version.java:27) HV000001: Hibernate Validator 5.1.1.Final
+INFO  [2017-01-02 15:15:41] (AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  [2017-01-02 15:15:42] (QueryTranslatorFactoryInitiator.java:47) HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2017-01-02 15:15:42] (ContextLoader.java:345) Root WebApplicationContext: initialization completed in 7237 ms
+INFO  [2017-01-02 15:15:43] (FrameworkServlet.java:489) FrameworkServlet 'rms': initialization started
+INFO  [2017-01-02 15:15:43] (AbstractApplicationContext.java:581) Refreshing WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 15:15:43 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 15:15:43] (XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [springmvc.xml]
+INFO  [2017-01-02 15:15:43] (AutowiredAnnotationBeanPostProcessor.java:155) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rms.controller.IndexController.index()
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.add(com.rms.vo.OrgVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.getAll(java.lang.String)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgController.deleteAll(java.lang.String[])
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/org/getAllLikeTree],methods=[GET]}" onto public java.util.List<com.rms.common.dto.OrganizationDto> com.rms.controller.OrgController.getAllLikeTree()
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.add(com.rms.vo.OrgTypeVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/update],methods=[PUT]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.update(com.rms.common.entity.OrgTypeEntity)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/delete/{id}],methods=[DELETE]}" onto public void com.rms.controller.OrgTypeContorller.delete(java.lang.String)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getOthers/{id}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getOthers(java.lang.String)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getAllWithoutPage],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getAllWithoutPage()
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getOrgTypeByPid/{pid}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getOrgTypeByPid(java.lang.String,int,int)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgType/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeContorller.getAllOrgType(int,int)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgTypeRule/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeRuleContorller.add(com.rms.vo.OrgTypeRuleVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/orgTypeRule/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.OrgTypeRuleContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.add(com.rms.vo.PersonVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/update],methods=[PUT]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.update(com.rms.common.entity.PersonEntity)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/delete/{id}],methods=[DELETE]}" onto public void com.rms.controller.PersonContorller.delete(java.lang.String)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getAll(int,int)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByNickName/{nickName}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByNickName(java.lang.String)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByEmail],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByEmail(java.lang.String)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByIdCard/{idCard}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByIdCard(java.lang.String)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/getByPhone/{phone}],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.getByPhone(java.lang.String)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/person/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.PersonContorller.deleteAll(java.lang.String[])
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/add],methods=[POST]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.add(com.rms.vo.PositionVo,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/getAll],methods=[GET]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.getAll()
+INFO  [2017-01-02 15:15:43] (AbstractHandlerMethodMapping.java:543) Mapped "{[/position/deleteAll],methods=[DELETE]}" onto public com.rms.common.util.Result com.rms.controller.PositionController.deleteAll(java.lang.String[])
+INFO  [2017-01-02 15:15:44] (RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 15:15:43 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 15:15:44] (RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: WebApplicationContext for namespace 'rms-servlet': startup date [Mon Jan 02 15:15:43 CST 2017]; parent: Root WebApplicationContext
+INFO  [2017-01-02 15:15:45] (AbstractUrlHandlerMapping.java:354) Mapped URL path [/view/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+INFO  [2017-01-02 15:15:45] (FrameworkServlet.java:508) FrameworkServlet 'rms': initialization completed in 2133 ms
+WARN  [2017-01-02 15:15:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:15:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:15:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:15:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:15:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 15:15:54] (PersonContorller.java:48) page=================1
+INFO  [2017-01-02 15:16:44] (PersonContorller.java:48) page=================1
+WARN  [2017-01-02 15:16:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:16:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:16:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:16:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:16:51] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 15:16:52] (PersonContorller.java:48) page=================1
+INFO  [2017-01-02 15:17:35] (PersonContorller.java:48) page=================1
+WARN  [2017-01-02 15:17:46] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:17:46] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:17:46] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:17:46] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 15:17:46] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+INFO  [2017-01-02 15:17:47] (PersonContorller.java:48) page=================1
+INFO  [2017-01-02 15:37:06] (PersonContorller.java:48) page=================1
+WARN  [2017-01-02 18:41:24] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:24] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:24] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:24] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:24] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:41:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:49] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:49] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:49] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:49] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:49] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:43:53] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 18:47:28] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:09:57] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:09:57] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:09:58] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:09:58] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:09:58] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:10:03] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:10:03] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:10:03] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:10:03] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:10:03] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:23] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:27] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:27] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:27] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/content/categroy/all] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:27] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'
+WARN  [2017-01-02 19:12:27] (DispatcherServlet.java:1147) No mapping found for HTTP request with URI [/item/cat/list] in DispatcherServlet with name 'rms'

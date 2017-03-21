@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rms-dao/dao.iml" filepath="$PROJECT_DIR$/rms-dao/dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/rms.iml" filepath="$PROJECT_DIR$/.idea/rms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rms-common/rms-common.iml" filepath="$PROJECT_DIR$/rms-common/rms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rms-config/rms-config.iml" filepath="$PROJECT_DIR$/rms-config/rms-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rms-dao/rms-dao.iml" filepath="$PROJECT_DIR$/rms-dao/rms-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rms-facade/rms-facade.iml" filepath="$PROJECT_DIR$/rms-facade/rms-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rms-service/rms-org-service.iml" filepath="$PROJECT_DIR$/rms-service/rms-org-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rms-web/rms-web.iml" filepath="$PROJECT_DIR$/rms-web/rms-web.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/js/config.router.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/controllers/errorMessage.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/controllers/orgController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/controllers/orgType.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/form_orgType_add.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/rms_org.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/rms_orgType.html" charset="UTF-8" />
+  </component>
+</project>

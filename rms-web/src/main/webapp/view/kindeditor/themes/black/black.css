@@ -1,0 +1,12 @@
+.ke-container-black {
+        display: block;
+        border: 0px;
+        background-color: #FFF;
+        overflow: hidden;
+}
+.ke-container-black .ke-toolbar {
+        border-bottom: 1px solid #32404e;
+        background-color: #32404e;
+        padding: 2px 5px;
+        overflow: hidden;
+}
