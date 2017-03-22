@@ -103,8 +103,10 @@ public class OrganizationServiceImpl extends BasicServiceImpl<OrgEntity> impleme
     @Transactional
     public OrgEntity save(OrgEntity orgEntity){
         OrgEntity parentOrg = this.getById(orgEntity.getParentId());
-        parentOrg.setLeaf(false);
-        organizationRepository.save(parentOrg);
+        if (parentOrg != null) {
+            parentOrg.setLeaf(false);
+            organizationRepository.save(parentOrg);
+        }
         return organizationRepository.save(orgEntity);
     }
 }
