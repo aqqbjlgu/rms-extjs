@@ -26,7 +26,7 @@ public class OrgRuleEntity extends BasicEntity {
     /**
      * 不具有管理功能。
      */
-    private static final Integer NO_TYPE = 2;
+    private static final Integer NO_TYPE = -1;
     private String orgId;
     private String managerOrg;
 
