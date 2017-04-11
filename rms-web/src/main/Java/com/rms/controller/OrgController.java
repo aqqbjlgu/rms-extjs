@@ -19,6 +19,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -95,6 +96,21 @@ public class OrgController {
             return Result.build(500, ExceptionUtil.getStackTrace(e), false, ErrorType.NormException.toString());
         }
         return Result.ok(pageReturn);
+    }
+    
+    @RequestMapping(value = "/getAllByName/{name}",method = RequestMethod.GET)
+    public @ResponseBody Result getAllByName(@PathVariable String name){
+        List<OrgEntity> orgs = null;
+        try {
+            orgs = organizationService.getAllByName(name);
+        }catch (Exception e){
+            log.error("500", e);
+            if(e instanceof RuntimeException){
+                return Result.build(500, ExceptionUtil.getStackTrace(e), false, ErrorType.RuntimeException.toString());
+            }
+            return Result.build(500, ExceptionUtil.getStackTrace(e), false, ErrorType.NormException.toString());
+        }
+        return Result.ok(orgs);
     }
     
     @RequestMapping(value = "/getAllLikeTree",method = RequestMethod.GET)

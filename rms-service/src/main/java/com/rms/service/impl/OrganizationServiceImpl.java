@@ -55,6 +55,10 @@ public class OrganizationServiceImpl extends BasicServiceImpl<OrgEntity> impleme
         return organizationRepository.getAllByParentId(node);
     }
     
+    public List<OrgEntity> getAllByName(String name) {
+        return organizationRepository.getAllByName(name);
+    }
+    
     public List<OrgEntity> getAllByParentId(List<String> parentIds) {
         return organizationRepository.getAllByParentId(parentIds);
     }

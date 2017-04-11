@@ -12,6 +12,7 @@ public interface OrganizationService extends BasicService<OrgEntity> {
     
     List<OrgEntity> getAllByTypeId(List<String> typeIds);
     List<OrgEntity> getAllByParentId(String node);
+    List<OrgEntity> getAllByName(String name);
     List<OrganizationDto> getAllByParentId();
     List<OrgEntity> getAllByRule(String orgId);
     void delete(List<String> ids) throws Exception;

@@ -20,6 +20,9 @@ public interface OrganizationRepository extends JpaRepository<OrgEntity, String>
     @Query("from OrgEntity where parentId in (:parentIds)")
     List<OrgEntity> getAllByParentId(@Param("parentIds") List<String> parentIds);
     
+    @Query("from OrgEntity where name like %:name%")
+    List<OrgEntity> getAllByName(@Param("name") String name);
+    
     @Query("from OrgEntity where id in (:ids)")
     List<OrgEntity> getAllByIds(@Param("ids") List<String> ids);
     
