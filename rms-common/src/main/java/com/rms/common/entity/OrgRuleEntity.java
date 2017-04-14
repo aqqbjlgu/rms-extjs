@@ -30,7 +30,7 @@ public class OrgRuleEntity extends BasicEntity {
     private String orgId;
     private String managerOrg;
 
-    @Column(name = "t_orgid", nullable = false, unique = true)
+    @Column(name = "t_orgid", nullable = false)
     public String getOrgId() {
         return orgId;
     }

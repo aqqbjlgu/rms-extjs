@@ -113,6 +113,21 @@ public class OrgController {
         return Result.ok(orgs);
     }
     
+    @RequestMapping(value = "/getOrgRuleByOrgId/{orgId}",method = RequestMethod.GET)
+    public @ResponseBody Result getOrgRuleByOrgId(@PathVariable String orgId){
+        List<OrgEntity> orgs = null;
+        try {
+            orgs = organizationService.getOrgRuleByOrgId(orgId);
+        }catch (Exception e){
+            log.error("500", e);
+            if(e instanceof RuntimeException){
+                return Result.build(500, ExceptionUtil.getStackTrace(e), false, ErrorType.RuntimeException.toString());
+            }
+            return Result.build(500, ExceptionUtil.getStackTrace(e), false, ErrorType.NormException.toString());
+        }
+        return Result.ok(orgs);
+    }
+    
     @RequestMapping(value = "/getAllLikeTree",method = RequestMethod.GET)
     public @ResponseBody List<OrganizationDto> getAllLikeTree(){
         List<OrganizationDto> result = organizationService.getAllByParentId() ;

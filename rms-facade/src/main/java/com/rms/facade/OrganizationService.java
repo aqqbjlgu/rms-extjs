@@ -15,6 +15,7 @@ public interface OrganizationService extends BasicService<OrgEntity> {
     List<OrgEntity> getAllByName(String name);
     List<OrganizationDto> getAllByParentId();
     List<OrgEntity> getAllByRule(String orgId);
+    List<OrgEntity> getOrgRuleByOrgId(String orgId);
     void delete(List<String> ids) throws Exception;
     OrgEntity save(OrgEntity orgEntity);
 }

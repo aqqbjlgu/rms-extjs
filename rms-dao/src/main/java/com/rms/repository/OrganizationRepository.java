@@ -1,6 +1,7 @@
 package com.rms.repository;
 
 import com.rms.common.entity.OrgEntity;
+import com.rms.common.entity.OrgRuleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -29,6 +30,9 @@ public interface OrganizationRepository extends JpaRepository<OrgEntity, String>
     @Modifying
     @Query("delete from OrgEntity where id in(:ids)")
     void delete(@Param("ids") List<String> ids);
+    
+    @Query("from OrgEntity o join OrgRuleEntity ore on o.id = ore.orgId where ore.orgId = :orgId")
+    List<OrgEntity> getOrgRuleByOrgId(@Param("orgId")String orgId);
 
 }
 

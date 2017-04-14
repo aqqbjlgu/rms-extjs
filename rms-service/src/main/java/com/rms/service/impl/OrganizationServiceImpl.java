@@ -7,18 +7,22 @@ import com.rms.facade.OrganizationRuleService;
 import com.rms.facade.OrganizationService;
 import com.rms.common.entity.OrgEntity;
 import com.rms.repository.OrganizationRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import static com.sun.tools.doclint.Entity.or;
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.ignoreCase;
 
 
@@ -32,6 +36,8 @@ public class OrganizationServiceImpl extends BasicServiceImpl<OrgEntity> impleme
     private OrganizationRepository organizationRepository;
     @Autowired
     private OrganizationRuleService organizationRuleService;
+    
+    private static final Logger log = LoggerFactory.getLogger(OrganizationServiceImpl.class);
     public void deleteOrgTypRule() {
         OrgEntity orgEntity = new OrgEntity();
         orgEntity.setAddress("1");
@@ -76,6 +82,10 @@ public class OrganizationServiceImpl extends BasicServiceImpl<OrgEntity> impleme
         return orgEntities;
     }
     
+    public List<OrgEntity> getOrgRuleByOrgId(String orgId) {
+        return organizationRepository.getOrgRuleByOrgId(orgId);
+    }
+    
     private List<OrganizationDto> getOrganizationTree(String parentId){
         List<OrgEntity> orgEntities =  organizationRepository.getAllByParentId(parentId);
         List<OrganizationDto> organizationDtos = new ArrayList<OrganizationDto>();
@@ -99,6 +109,7 @@ public class OrganizationServiceImpl extends BasicServiceImpl<OrgEntity> impleme
         List<OrgEntity> organizations = this.getAllByParentId(ids);
         if(CollectionUtils.isEmpty(organizations)){
             organizationRepository.delete(ids);
+            organizationRuleService.deleteByOrgIds(ids);
         }else{
             throw new BusinessException(500,"请先删除下属组织机构");
         }
@@ -111,6 +122,30 @@ public class OrganizationServiceImpl extends BasicServiceImpl<OrgEntity> impleme
             parentOrg.setLeaf(false);
             organizationRepository.save(parentOrg);
         }
-        return organizationRepository.save(orgEntity);
+        OrgEntity result = organizationRepository.save(orgEntity);
+        List<String> orgRuleIds = orgEntity.getOrgRuleIds();
+        List<OrgRuleEntity> orgRuleEntities = new ArrayList<OrgRuleEntity>();
+        if (!CollectionUtils.isEmpty(orgRuleIds)) {
+            for (int i = 0; i <orgRuleIds.size() ; i++) {
+                OrgRuleEntity orgRuleEntity = new OrgRuleEntity();
+                orgRuleEntity.setManagerOrg(orgRuleIds.get(i));
+                orgRuleEntity.setOrgId(result.getId());
+                orgRuleEntity.setBelongTo(result.getBelongTo());
+                orgRuleEntity.setInsertDate(result.getInsertDate());
+                orgRuleEntity.setUpDateDate(result.getUpDateDate());
+                orgRuleEntity.setInsertUserId(result.getInsertUserId());
+                orgRuleEntities.add(orgRuleEntity);
+            }
+        }
+        if (!StringUtils.isEmpty(orgEntity.getId())) {
+            try {
+                organizationRuleService.deleteByOrgId(orgEntity.getId());
+            } catch (Exception e) {
+                log.error("删除组织管理规则出错", e);
+                throw new RuntimeException();
+            }
+        }
+        organizationRuleService.save(orgRuleEntities);
+        return result;
     }
 }

@@ -3,6 +3,8 @@ package com.rms.common.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import java.util.List;
 
 /**组织对象，该表能生成完整的对像。
  * 根据组织类型具体存储实际中存在的组织
@@ -71,6 +73,8 @@ public class OrgEntity extends BasicEntity {
      * 备用字段
      */
     private String att6;
+    
+    private List<String> orgRuleIds;
 
     @Column(name = "t_name")
     public String getName() {
@@ -205,5 +209,14 @@ public class OrgEntity extends BasicEntity {
 
     public void setLeaf(boolean leaf) {
         isLeaf = leaf;
+    }
+    
+    @Transient
+    public List<String> getOrgRuleIds() {
+        return orgRuleIds;
+    }
+    
+    public void setOrgRuleIds(List<String> orgRuleIds) {
+        this.orgRuleIds = orgRuleIds;
     }
 }

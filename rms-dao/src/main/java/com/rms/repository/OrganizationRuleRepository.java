@@ -17,6 +17,14 @@ public interface OrganizationRuleRepository extends JpaRepository<OrgRuleEntity,
     @Modifying
     @Query("delete from OrgRuleEntity where id in(:ids)")
     void delete(@Param("ids") List<String> ids);
-
+    
+    @Modifying
+    @Query("delete from OrgRuleEntity where orgId = :orgId")
+    void deleteByOrgId(@Param("orgId") String orgId);
+    
+    @Modifying
+    @Query("delete from OrgRuleEntity where orgId in (:orgIds)")
+    void deleteByOrgIds(@Param("orgIds") List<String> orgIds);
+    
 }
 

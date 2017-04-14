@@ -37,4 +37,12 @@ public class OrganizationRuleServiceImpl extends BasicServiceImpl<OrgRuleEntity>
     public void delete(List<String> ids) throws Exception {
         organizationRuleRepository.delete(ids);
     }
+    
+    public void deleteByOrgId(String orgIds) {
+        organizationRuleRepository.deleteByOrgId(orgIds);
+    }
+    
+    public void deleteByOrgIds(List<String> orgIds) {
+        organizationRuleRepository.deleteByOrgIds(orgIds);
+    }
 }
