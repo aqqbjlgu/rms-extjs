@@ -9,7 +9,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "t_person")
-public class PersonEntity  extends BasicEntity {
+public class PersonEntity  extends BasicEntity implements Principal {
+    
+    public static final String PRINCIPAL_TYPE = "user";
     /**
      * 姓名
      */
